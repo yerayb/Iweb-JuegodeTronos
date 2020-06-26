@@ -1,0 +1,18 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div class="temporada">
+    <h2>{% trans "Temporada" %} {{ temporada.num_temporada }}</h2>
+    <p>{% trans "Num capitulos" %}: {{ temporada.num_episodios }}</p>
+    <span>{% trans "Personajes" %}: </span>
+    {% for temporada in temporada.tempo.all %}
+    {% if forloop.last %}
+      {{temporada}} <br>
+    {% else %}
+      {{temporada}}<span>,</span>
+    {% endif %}
+    {% endfor %}
+
+  </div>
+{% endblock %}

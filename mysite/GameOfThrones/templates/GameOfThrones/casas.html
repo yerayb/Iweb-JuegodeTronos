@@ -1,0 +1,15 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<h2 class ="Casas">{% trans "CASAS" %}</h2>
+<div id="casaWrapper">
+  {% for casa in casas %}
+    <div id="casa2">
+      <h2><a href="{% url 'casa_detail' pk=casa.pk %}">{{ casa.nombre }}</a></h2>
+      <img src="{{ casa.imagen }}" width="100" height="100"alt="">
+
+    </div>
+  {% endfor %}
+  </div>
+{% endblock %}

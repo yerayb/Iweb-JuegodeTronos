@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-21 12:52+0100\n"
+"PO-Revision-Date: 2019-12-21 12:54-0015\n"
+"Last-Translator: b'  <yeraybellanco@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: GameOfThrones/templates/GameOfThrones/base.html:25
+msgid "Inicio"
+msgstr "Home"
+
+#: GameOfThrones/templates/GameOfThrones/base.html:26
+#: GameOfThrones/templates/GameOfThrones/casa_detail.html:9
+#: GameOfThrones/templates/GameOfThrones/temporada_detail.html:8
+msgid "Personajes"
+msgstr "Characters"
+
+#: GameOfThrones/templates/GameOfThrones/base.html:27
+msgid "Casas"
+msgstr "Houses"
+
+#: GameOfThrones/templates/GameOfThrones/base.html:28
+msgid "Temporadas"
+msgstr "Seasons"
+
+#: GameOfThrones/templates/GameOfThrones/casa_detail.html:7
+msgid "Lema"
+msgstr "Slogan"
+
+#: GameOfThrones/templates/GameOfThrones/casa_detail.html:8
+msgid "Asentamiento"
+msgstr "Settlement"
+
+#: GameOfThrones/templates/GameOfThrones/casas.html:5
+msgid "CASAS"
+msgstr "HOUSES"
+
+#: GameOfThrones/templates/GameOfThrones/index.html:11
+msgid "Casa Targaryen"
+msgstr "Targaryen House"
+
+#: GameOfThrones/templates/GameOfThrones/index.html:24
+msgid "Casa Stark"
+msgstr "Stark House"
+
+#: GameOfThrones/templates/GameOfThrones/index.html:40
+msgid "Casa Baratheon"
+msgstr "Baratheon House"
+
+#: GameOfThrones/templates/GameOfThrones/index.html:54
+msgid "Casa Lannister"
+msgstr "Lannister House"
+
+#: GameOfThrones/templates/GameOfThrones/index.html:68
+msgid "Casa Martell"
+msgstr "Martell House"
+
+#: GameOfThrones/templates/GameOfThrones/personaje_detail.html:9
+msgid "Nombre"
+msgstr "Name"
+
+#: GameOfThrones/templates/GameOfThrones/personaje_detail.html:11
+msgid "temporadas"
+msgstr "Seasons"
+
+#: GameOfThrones/templates/GameOfThrones/personaje_detail.html:20
+msgid "Casa"
+msgstr "House"
+
+#: GameOfThrones/templates/GameOfThrones/personajes.html:7
+msgid "PERSONAJES"
+msgstr "CHARACTERS"
+
+#: GameOfThrones/templates/GameOfThrones/temporada_detail.html:6
+#: GameOfThrones/templates/GameOfThrones/temporadas.html:9
+msgid "Temporada"
+msgstr "Season"
+
+#: GameOfThrones/templates/GameOfThrones/temporada_detail.html:7
+msgid "Num capitulos"
+msgstr "Number of chapters"
+
+#: GameOfThrones/templates/GameOfThrones/temporadas.html:5
+msgid "TEMPORADAS"
+msgstr "SEASONS"
+
+#: mysite/settings.py:129
+msgid "Español"
+msgstr "Spanish"
+
+#: mysite/settings.py:130
+msgid "Inglés"
+msgstr "English"

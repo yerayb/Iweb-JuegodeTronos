@@ -1,0 +1,14 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<h2 class="tempo">{% trans "TEMPORADAS" %}</h2>
+  <div id="tempoWrapper">
+  {% for temporada in temporadas %}
+    <div id="temporada2">
+      <h2><a href="{% url 'temporada_detail' pk=temporada.pk %}">{% trans "Temporada" %} {{ temporada.num_temporada }}</a></h2>
+      <img src="{{ temporada.imagen }}" width="280" height="280"alt="">
+    </div>
+  {% endfor %}
+    </div>
+{% endblock %}

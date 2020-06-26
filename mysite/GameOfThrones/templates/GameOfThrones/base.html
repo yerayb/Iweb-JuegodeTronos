@@ -1,0 +1,84 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Proyecto de Ingeniería Web GameOfThrones">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>GameOfThrones</title>
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="{% static 'MediumLightbox/styles.css' %}" rel="stylesheet">
+    <script src="mediumLightbox.js" ></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "http://127.0.0.1:8000/",
+    "logo": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2019/04/juego-tronos-temporada-8_0.jpg?itok=f09k2dy9",
+    "address": "Universidad de deusto",
+    "Boss": "Yeray Bellanco",
+    "email": "yeraybellanco@opendeusto.es",
+    "description": "Pagina web sobre juego de tronos",
+    "co-founders": [{
+      "@type":"Person",
+      "additionalName": "Gorka Garate",
+      "email": "ggarate@opendeusto.es"
+    },
+    {
+      "@type":"Person",
+      "additionalName": "Jon Uraga",
+      "email": "j.uraga@opendeusto.es"
+    }
+    ]
+  }
+
+  </script>
+    {% block javascript %}
+    {% endblock %}
+  </head>
+  <body background="{% static 'css/fondo3.jpg' %}", bgcolor="E0E0CF">
+    <div>
+      <h1><a href="/">Game Of Thrones</a></h1>
+    </div>
+    <header>
+      <nav class="navegacion">
+        <ul class="menu">
+          <li><a href="/inicio/">{% trans "Inicio" %}</a></li>
+          <li><a href="/personaje/">{% trans "Personajes" %}</a></li>
+          <li><a href="/casa/">{% trans "Casas" %}</a></li>
+          <li><a href="/temporada/">{% trans "Temporadas" %}</a></li>
+          <li> <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Go" />
+    </form> </li>
+    </ul>
+    </nav>
+
+    <img class="imageninicio" src="{% static 'inicio.jpg' %}" width="1200" height="640"alt="">
+    </header>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+{% block javascript %}
+  {% load static %}
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="content container">
+    <div class="row">
+      <div class="row-md-8">
+        <p class="nombreCasa">{% trans "Casa Targaryen" %}</p>
+        {% for personaje in personajesTargaryen %}
+       {% if forloop.counter >= 3 %}
+
+        {% else %}
+        <div class="personaje">
+            <h2 ><a class="nomPersona" href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+            <img src="{{ personaje.imagen }}" width="300" height="300"alt="">
+        </div>
+        {% endif %}
+        {% endfor %}
+        <br>
+        <br>
+        <p class="nombreCasa">{% trans "Casa Stark" %}</p>
+        {% for personaje in personajesStark %}
+        {% if forloop.counter >= 3 %}
+
+        {% else %}
+
+          <div class="personaje">
+            <h2><a class="nomPersona"  href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+            <img src="{{ personaje.imagen }}" width="300" height="300"alt="">
+          </div>
+        {% endif %}
+        {% endfor %}
+
+        <br>
+        <br>
+
+         <p class="nombreCasa">{% trans "Casa Baratheon" %}</p>
+        {% for personaje in personajesBaratheon %}
+        {% if forloop.counter >= 3 %}
+
+        {% else %}
+
+          <div class="personaje">
+            <h2><a class="nomPersona"  href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+            <img src="{{ personaje.imagen }}" width="300" height="300"alt="">
+          </div>
+        {% endif %}
+        {% endfor %}
+         <br>
+        <br>
+            <p class="nombreCasa">{% trans "Casa Lannister" %}</p>
+        {% for personaje in personajesLannister %}
+        {% if forloop.counter >= 3 %}
+
+        {% else %}
+          <div class="personaje">
+            <h2><a class="nomPersona"  href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+            <img src="{{ personaje.imagen }}" width="300" height="300"alt="">
+          </div>
+        {% endif %}
+        {% endfor %}
+
+        <br>
+        <br>
+          <p class="nombreCasa"> {% trans "Casa Martell" %} </p>
+        {% for personaje in personajesMartell %}
+          <div class="personaje">
+            <h2><a class="nomPersona"  href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+            <img src="{{ personaje.imagen }}" width="300" height="300"alt="">
+          </div>
+        {% endfor %}
+
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

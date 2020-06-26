@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+/*  background-image: url("fondo.jpg"); */
+  padding-left: 15px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+/*
+img{
+  display: block;
+  max-width: 100%;
+}
+*/
+
+.navegacion{
+  width: 1200px;
+  margin: 30px auto;
+  background: #000000;
+}
+
+.navegacion ul{
+  list-style: none;
+}
+
+.menu > li{
+  /*position: relative;*/
+  display: inline-block;
+}
+
+.menu > li > a{
+  display: block;
+  padding: 15px 30px;
+  color: #fff;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  color: #CE7D35;
+  transition: all .3s;
+}
+
+h1{
+  text-align: center;
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 30px;
+  color: #000000;
+/*  font-family: 'Blippo', fantasy; */
+}
+
+/*.personaje h2{
+  font-family: 'Blippo', fantasy;
+}
+*/
+
+#wrapper {
+  width:1000px;
+  margin:0
+  auto;
+}
+#personaje2 {
+  float:left;
+  margin-left:60px;
+}
+
+#casaWrapper {
+  width:600px;
+  margin:0
+  auto;
+}
+
+#casa2 {
+  float:left;
+  margin-left:60px;
+}
+
+.Casas{
+  text-align: center;
+  font-size: 60px;
+}
+
+.Personajes{
+  text-align: center;
+  font-size: 60px;
+}
+#tempoWrapper{
+  width:1000px;
+  margin:0
+  auto;
+}
+
+#temporada2{
+  float: left;
+  margin-left: 30px;
+}
+
+.tempo{
+  text-align: center;
+  font-size: 60px;
+}
+
+.nombreCasa{
+  font-size: 60px;
+  text-align: center;
+}
+
+#indexWrapper{
+  width:1000px;
+  margin:0
+  auto;
+}
+
+#indexFloat{
+  float: left;
+  margin-left: 30px;
+}
+
+.imageninicio{
+  position: relative;
+  margin-left: 444px;
+}

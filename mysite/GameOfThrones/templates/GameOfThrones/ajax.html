@@ -1,0 +1,11 @@
+{% if personaje %}
+  {% if personaje.imagen %}
+    {% load static %}
+      <img src="{% static personaje.imagen.name %}" alt="{{ personaje.imagen.name }}">
+      <!-- <img src="{% static personaje.imagen.name %}" alt="{{ personaje.imagen.name }}" class="personaje-avatar"> -->
+  {% else %}
+    <p class="personaje-meta">Este personaje no tiene imagen</p>
+  {% endif %}
+{% else %}
+  <p class="personaje-media">Este personaje no existe</p>
+{% endif %}

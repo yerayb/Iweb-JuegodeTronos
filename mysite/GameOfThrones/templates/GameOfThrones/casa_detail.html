@@ -1,0 +1,18 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div class="casa">
+    <h2>{{ casa.nombre }}</h2>
+    <p>{% trans "Lema" %}: {{ casa.lema }}</p>
+    <p>{% trans "Asentamiento" %}: {{ casa.asentamiento }}</p>
+      <span>{% trans "Personajes" %}: </span>
+     {% for casa in casa.casaPersona.all %}
+      {% if forloop.last %}
+      {{casa}} <br>
+      {% else %}
+      {{casa}}<span>,</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

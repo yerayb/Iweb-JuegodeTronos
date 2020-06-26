@@ -1,0 +1,17 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+
+
+
+{% block content %}
+<h2 class = "Personajes">{% trans "PERSONAJES" %}</h2>
+<div id="wrapper">
+  {% for personaje in personaje %}
+    <div id="personaje2">
+      <h2><a href="{% url 'personaje_detail' pk=personaje.pk %}">{{ personaje.nombre }}</a></h2>
+      <img src="{{ personaje.imagen }}" width="260" height="146"alt="">
+
+    </div>
+  {% endfor %}
+  </div>
+{% endblock %}

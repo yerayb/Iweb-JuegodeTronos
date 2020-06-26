@@ -1,0 +1,25 @@
+{% extends 'GameOfThrones/base.html' %}
+{% load i18n %}
+{% block content %}
+  <div class="personaje">
+    <h2>{{ personaje.nombre }}</h2>
+      <img src="{{ personaje.imagen }}" width="255" height="255"alt="">
+      <br>
+      <br>
+      <span>{% trans "Nombre" %}: {{personaje.nombre}}</span>
+      <br>
+      <span class="TempoP">{% trans "temporadas" %}:</span>
+     {% for temporada in personaje.temporadas.all %}
+      {% if forloop.last %}
+        {{temporada.num_temporada}}
+      {% else %}
+        {{temporada.num_temporada}}<span>,</span>
+       {% endif %}
+    {% endfor %}
+      <br>
+      <span class="CasaP">{% trans "Casa" %}: </span>{{personaje.casa}}
+
+    <p> {% trans personaje.descripcion|safe %} </p>
+
+  </div>
+{% endblock %}
